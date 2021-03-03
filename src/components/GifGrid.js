@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { GifGridItem } from "./GifGridItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
+import PropTypes from "prop-types";
 
 export const GifGrid = ({ category }) => {
 
@@ -20,3 +21,7 @@ export const GifGrid = ({ category }) => {
         </Fragment>
     );
 };
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired,
+}
